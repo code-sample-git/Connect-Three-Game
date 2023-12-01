@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#gameBoard {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.column {
+    width: 100px;
+    height: 600px;
+    border: 2px solid black;
+    background-color: lightgray;
+    margin: 0 5px;
+    position: relative;
+}
+
+.disc {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    transition: bottom 0.5s ease-in; 
+}
+
+.winning-line {
+    position: absolute;
+    height: 3px;
+    background: black;
+    transform-origin: left center;
+    
+}
