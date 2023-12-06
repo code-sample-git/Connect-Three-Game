@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cashier Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="adminSection">
+            <header>
+                <h2>Admin</h2>
+            </header>
+            <p>Add a new product</p>
+            <input type="text" id="productName" placeholder="Product Name">
+            <button onclick="addProduct()">Add Product</button>
+            <p>Select a product then add the price per unit</p>
+            <select id="productList"></select>
+            <input type="number" id="productPrice" placeholder="Price per Unit">
+            <button onclick="setPrice()">Add Price</button>
+        </div>
+
+        <div id="checkoutSection">
+            <header>
+                <h2>Checkout</h2>
+            </header>
+            <button class="centered-button" onclick="startNewTransaction()">New Transaction</button>
+            <p>Select a product then type the number of units</p>
+            <select id="checkoutProductList"></select> Unit: 
+            <input type="number" id="quantity" placeholder="Quantity">
+            <button onclick="addToCart()">Add to Cart</button>
+            <div id="numberPadContainer"  class="flex-center">
+                <div id="numberPad" class="grid">
+                    <!-- Generate buttons 1-9 here -->
+                </div>
+                <button class="right-align" onclick="processPayment()">Pay</button>
+            </div>
+        </div>
+
+        <div id="receiptSection">
+            <header>
+                <h2>Receipt</h2>
+            </header>
+            <div id="dateTime"></div>
+            <div id="cartItems"></div>
+            <div id="totalAmount"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

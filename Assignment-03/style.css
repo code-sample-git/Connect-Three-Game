@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#adminSection, #checkoutSection, #receiptSection {
+    margin-bottom: 20px;
+    padding: 0px;
+    border: 1px solid #ddd;
+    background-color: #cdcdcd;
+}
+
+header {
+    background-color: #3f3e3e; /* deep grey */
+    color: #fff; /* white */
+    padding: 5px;
+    text-align: center; /* center the text */
+}
+
+h2 {
+    margin: 0px;
+}
+
+input[type="text"], input[type="number"], select {
+    margin: 5px;
+    height: 23px;
+}
+
+select {
+    min-width: 100px;
+}
+
+.centered-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+#quantity {
+    width: 80px;
+} 
+
+#numberPad button {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right-align {
+    align-self: flex-end;
+}
+
+table {
+    border-collapse: collapse; /* ensures the borders collapse into a single border */
+    width:85%; /* makes the table take up the full width of its parent */
+    max-width: 85%;
+    background-color: white; /* sets the background color to white */
+    margin-right: 10px;
+    margin-left: 10px;;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+table, th, td {
+    border: 1px solid black; /* adds a border to the table and all th and td elements */
+    padding: 10px; /* adds some padding to the th and td elements */
+}
+
+#dateTime{
+    margin-top: 20px;
+}
+
+#totalAmount{
+    margin-bottom: 20px;
+}
