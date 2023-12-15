@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Cheat Sheet for URL Shortening Service</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Cheat Sheet for URL Shortening Service</h1>
+
+        <div class="section">
+            <h2>Object: <code>translations</code></h2>
+            <p>Purpose: Stores language translations for UI elements.</p>
+            <p>Usage: <span class="code">translations['en-US'].websiteTitle</span> retrieves the website title in English.</p>
+        </div>
+
+        <div class="section">
+            <h2>Variables</h2>
+            <p><code>lang</code>: Current language setting.</p>
+            <p><code>shortenedUrls</code>: Array to store shortened URL data.</p>
+        </div>
+
+        <div class="section">
+            <h2>Handling Language Switch</h2>
+            <p>Event Listener: Attached to elements with class <code>.langLink</code>.</p>
+            <p>Function: <code>updateTranslation(newLang)</code> updates UI elements with selected language translations.</p>
+        </div>
+
+        <div class="section">
+            <h2>Function: <code>updateTranslation(newLang)</code></h2>
+            <p>Updates language settings in localStorage. Changes URL to include new language tag. Updates text content of various elements like placeholders, button labels, etc.</p>
+        </div>
+
+        <div class="section">
+            <h2>Function: <code>handleSubmit(event)</code></h2>
+            <p>Trigger: On form submission. Validates URL input and sends a POST request to shorten the URL. Handles server response and error situations.</p>
+        </div>
+
+        <div class="section">
+            <h2>Function: <code>showShortenedURL(data)</code></h2>
+            <p>Displays the shortened URL and associated options (copy, share, QR code generation). Uses dynamic DOM manipulation to create elements.</p>
+        </div>
+
+        <div class="section">
+            <h2>Utility Functions</h2>
+            <p><code>validateUrl(url)</code>: Validates the input URL format.</p>
+            <p><code>showAlertMessage(message)</code>: Displays alert messages.</p>
+            <p><code>clearMessages()</code>: Clears alert messages.</p>
+        </div>
+
+        <div class="section">
+            <h2>Event Listeners</h2>
+            <p><code>DOMContentLoaded</code>: Sets up initial language settings based on URL, localStorage, or browser settings.</p>
+            <p><code>window.onload</code>: Loads shortened URLs from localStorage and displays them.</p>
+        </div>
+
+        <div class="section">
+            <h2>Key Concepts Demonstrated</h2>
+            <p>Local Storage, Event Handling, Dynamic DOM Manipulation, Asynchronous JavaScript, Error Handling, Localization and Internationalization.</p>
+        </div>
+
+        <div class="section">
+            <h2>Note</h2>
+            <p>This cheat sheet summarizes the script provided and does not include details of HTML/CSS components that might be required for full functionality.</p>
+        </div>
+    </div>
+</body>
+</html>
