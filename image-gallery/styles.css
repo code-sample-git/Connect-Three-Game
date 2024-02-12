@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gallery-img {
+    max-width: 80%;
+    max-height: 80vh;
+    display: block;
+    margin: 0 20px; /* Adjust spacing around the image */
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 5px; /* Small space around buttons for better appearance */
+    font-size: 16px; /* Larger font size for better readability */
+}
