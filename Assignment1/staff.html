@@ -1,0 +1,38 @@
+<!--
+* @name: Assignement1
+* @Course Code: SODV1201
+* @class: Software Development Diploma program.
+* @author: Michael Ng.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mark-to-grade.html">Mark to Grade</a></li>
+                <li><a href="staff.html">Staff</a></li>
+                <li><a href="weather.html">Weather</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>Please click the header name to sort the table.</p>
+        <table id="staff-list"></table>
+    </main>
+    <footer>
+        <script>
+            const currentDate = new Date();
+            document.write(`&copy; ${currentDate.getFullYear()} Michael Ng. All rights reserved.`);
+        </script>
+    </footer>
+    <script src="staff.js"></script>
+</body>
+</html>

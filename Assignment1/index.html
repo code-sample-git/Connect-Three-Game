@@ -1,0 +1,41 @@
+<!--
+* @name: Assignement1
+* @Course Code: SODV1201
+* @class: Software Development Diploma program.
+* @author: Michael Ng.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name's Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mark-to-grade.html">Mark to Grade</a></li>
+                <li><a href="staff.html">Staff</a></li>
+                <li><a href="weather.html">Weather</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <img id="profile-pic" src="Me.jpg" alt="Your Picture">
+            <p id="picture-name" style="display:none;">Picture Name: When I am doing Programing.</p>
+            <p>I like programming. I am able to code with C# and JavaScript.</p>
+        </section>
+    </main>
+    <footer>
+        <script>
+            const currentDate = new Date();
+            document.write(`&copy; ${currentDate.getFullYear()} Michael Ng. All rights reserved.`);
+        </script>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
