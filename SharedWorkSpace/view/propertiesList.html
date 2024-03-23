@@ -1,0 +1,159 @@
+<style>
+/* Container styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* You can choose another font */
+    background-image: none !important;
+    background-color: transparent !important;
+    overflow: hidden;
+    height: 100%
+}
+
+.container {
+    max-width: 1200px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+
+/* Header styling */
+.container h1 {
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Button styling */
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 5px; /* Spacing around buttons */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Controls div styling for additional control buttons */
+.controls {
+    text-align: center; /* Centers the control buttons */
+}
+
+/* Items and property item styling */
+#items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Spacing between grid items */
+    padding: 20px 0;
+}
+
+.item {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px); /* Adds a slight lift effect on hover */
+}
+
+.item h2 {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.item img {
+    width: 100%; /* Makes image fill the container */
+    height: auto;
+    display: block;
+}
+
+.item p {
+    margin: 0 10px 10px;
+    color: black;
+}
+
+.item button {
+    display: block;
+    width: calc(100% - 20px); /* Full width minus margin for visual consistency */
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+</style>
+
+<div>
+    <!--Searching-->
+    <input type="text" id="search" placeholder="Search for properties">
+    <button onclick="search()">Search</button>
+    <button onclick="displayProperties(properties)">Reset</button>
+</div>
+<div class="container">
+    <h1>Properties</h1>
+    <!-- A add New Property Butto-->
+    <button id="addNewProperty" onclick="showPage('propertyForm')">Add New Property</button>
+    <!--Menu-->
+    <div class="controls">
+        <button id="myOwnProperties">My Own Properties</button>
+    </div>
+    <!-- Display the Properties here -->
+    <div id="items"></div>
+</div>
+<script src="../model.js"></script>
+<script>
+    //if the user is logged in, hide the register and login buttons
+    if (sessionStorage.getItem("user")) {
+        //Show the myOwnProperties button
+        document.getElementById("myOwnProperties").style.display = "block";
+        //Show the Add New Property button
+        document.getElementById("addNewProperty").style.display = "block";
+    } else {
+        document.getElementById("myOwnProperties").style.display = "none";
+        document.getElementById("addNewProperty").style.display = "none";
+    }
+
+    //Load the properties from Local Storage
+    let properties = JSON.parse(localStorage.getItem("properties")) || [];
+    //Display the properties
+    displayProperties(properties);
+    function displayProperties(properties) {
+        const items = document.getElementById("items");
+        items.innerHTML = "";
+        properties.forEach(property => {
+            const item = document.createElement("div");
+            item.className = 'item';
+            item.classList.add("property");
+            item.innerHTML = `
+                <h2>${property.name}</h2>
+                <img src="${property.photos[0]}" alt="${property.name}">
+                <p>${property.city}, ${property.state}, ${property.country}</p>
+                <button onclick="location.href='propertyView.html?id=${property.id}'">View</button>
+            `;
+            items.appendChild(item);
+        });
+    }
+</script>

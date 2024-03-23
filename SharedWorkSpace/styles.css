@@ -1,0 +1,198 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-image: url('hk_backgroup.jpg'); /* Set the background image */
+    background-size: cover; /* Cover the entire content area */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed;
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3); /* White with transparency */
+    z-index: 0; /* Ensure this is behind the content */
+}
+
+header {
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+    z-index: 1000; /* Ensure header is above other content */
+    text-align: center; /* This will center all text within the header */
+
+} 
+
+header:hover {
+    background-color: rgba(242, 227, 23, 0.3); /* Darker shade on hover for subtle interaction */
+    
+}
+
+
+
+
+h1 {
+    margin: 0; /* Adjusted margin to clear the header */
+    color: #fff;
+    font-size: 36px;
+    font-weight: normal;
+    font-family: fantasy;
+}
+
+#slogan{
+    font-size: 1em;
+    margin-top: 10px;
+    font-weight: normal;
+    color: black;
+    animation: blink-animation 5s linear infinite; /* Apply the blink animation */
+  }
+  
+  /* Define the keyframes for the blinking animation */
+  @keyframes blink-animation {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.sidebar {
+    position: relative;
+    top: 100px + 1%; /* Adjusted to clear the header */
+    width: 250px;
+    height: calc(800px - 50px); /* Adjusted height to clear the header */
+    padding-top: 20px;
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+    z-index: 1000; /* Ensure sidebar is above other content */
+
+    
+}
+
+.sidebar:hover {
+    background-color: rgba(242, 227, 23, 0.5); /* Darker shade on hover */
+}
+
+
+
+
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0.5em;
+}
+
+
+.nav-menu ul li button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    background: none;
+    color: black;
+    transition: transform 0.3s ease, font-weight 0.3s ease; /* Smooth transition for transform and font-weight */
+}
+
+.nav-menu ul li button:hover, .nav-menu ul li button:focus {
+    transform: scale(1.2); /* Enlarge button text */
+    font-weight: bold; /* Make button text bold */
+}
+
+
+.content {
+    margin-left: 15%; /* Sidebar width */
+    margin-top: 0px; /* Header height */
+    padding: 20px;
+    width: calc(100% - 200px); /* Sidebar width */
+    height: auto;
+    position: relative;
+
+    
+}
+
+
+
+/* Ensure buttons and links have a consistent style */
+button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    display: flex; /* Enables Flexbox layout */
+    align-items: start; /* Aligns items to the start of the flex container */
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
+
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.controls button, .controls select {
+    padding: 10px;
+    margin-right: 10px;
+    outline: none;
+}
+
+#items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    width: calc(25% - 20px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.item h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.item p {
+    font-size: 16px;
+}
