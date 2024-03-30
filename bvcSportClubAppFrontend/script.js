@@ -8,7 +8,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         status: document.getElementById('status').value,
     };
 
-    fetch('http://localhost:3000/api/register', {
+    fetch('https://code-sample-git-github-io.onrender.com/api/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
